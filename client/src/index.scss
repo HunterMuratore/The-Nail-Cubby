@@ -1,0 +1,64 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* VARIABLES */
+$theme-dark: #050505;
+$theme-med: #2b2b2b;
+$theme-accent: #c2a23b;
+$theme-text: #EEEEEE;
+$main-padding: 0 5%;
+
+/* KEYFRAMES */
+@keyframes colorChange {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+/* RESETS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.4;
+    font-family: sans-serif;
+}
+
+html,
+body,
+#root {
+    min-height: 100%;
+    height: 100%;
+    color: $theme-text;
+}
+
+/* GLOBAL CLASSES */
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+body {
+    height: fit-content;
+    background-color: $theme-dark;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.main-padding {
+    padding: $main-padding;
+}

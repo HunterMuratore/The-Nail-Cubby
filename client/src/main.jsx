@@ -10,7 +10,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* Need basename basename='/thenailcubby' before building and copying to huntermuratore.com/thenailcubby */}
+    {/* Need <Router basename='/thenailcubby'> before building and copying to huntermuratore.com/thenailcubby */}
     {/* Don't need basename before building and copying to thenailcubby.com */}
     <Router>
       <App />

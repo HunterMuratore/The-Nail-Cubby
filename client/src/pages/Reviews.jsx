@@ -1,6 +1,6 @@
 function Reviews() {
     return (
-        <section id="reviews" className="reviews text-center mt-5 py-20">
+        <section id="reviews" className="reviews main-padding my-20">
 
         </section>
     )

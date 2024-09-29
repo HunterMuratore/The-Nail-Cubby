@@ -17,17 +17,17 @@ $theme-1-text: #6d4c41;
 /* Theme 2 */
 $theme-2-dark: #fffcf1;
 $theme-2-med: #0a9396;
-$theme-2-accent: #a6eeee;
+$theme-2-accent: #baf1f1;
 $theme-2-text: #000000;
 
 /* Theme 3 */
-$theme-3-dark: #d7dece;
+$theme-3-dark: #eff6e4;
 $theme-3-med: #C1CFA1;
 $theme-3-accent: #efdada;
 $theme-3-text: #171717;
 
 /* Theme 4 */
-$theme-4-dark: #FFEBD4;
+$theme-4-dark: #fdf2e6;
 $theme-4-med: #F7B5CA;
 $theme-4-accent: #FFC6C6;
 $theme-4-text: #000000;
@@ -49,6 +49,36 @@ $theme-7-dark: #c6a29b;
 $theme-7-med: #a1887f;
 $theme-7-accent: #fffbfa;
 $theme-7-text: #010101;
+
+/* Theme 8 */
+$theme-8-dark: #ffffff;
+$theme-8-med: #F7B5CA;
+$theme-8-accent: hsl(57, 96%, 80%);
+$theme-8-text: #000000;
+
+/* Theme 9 */
+$theme-9-dark: #fcf5e4;
+$theme-9-med: #BBAB8C;
+$theme-9-accent: #dce3d5;
+$theme-9-text: #333333;
+
+/* Theme 10 */
+$theme-10-dark: #fbfafa;
+$theme-10-med: #eaeaea;
+$theme-10-accent: #a17f9e;
+$theme-10-text: #0d0d0d;
+
+/* Theme 11 */
+$theme-11-dark: #ffffff;
+$theme-11-med: #a1887f;
+$theme-11-accent: #a594a4;
+$theme-11-text: #010101;
+
+/* Theme 12 */
+$theme-12-dark: #fbd0c8;
+$theme-12-med: #a1887f;
+$theme-12-accent: #fffbfa;
+$theme-12-text: #010101;
 
 $main-padding: 0 5%;
 
@@ -115,6 +145,51 @@ $main-padding: 0 5%;
   }
 }
 
+@mixin theme-8 {
+  background-color: $theme-8-dark;
+  color: $theme-8-text;
+
+  header {
+    background-color: $theme-8-accent;
+  }
+}
+
+@mixin theme-9 {
+  background-color: $theme-9-dark;
+  color: $theme-9-text;
+
+  header {
+    background-color: $theme-9-accent;
+  }
+}
+
+@mixin theme-10 {
+  background-color: $theme-10-dark;
+  color: $theme-10-text;
+
+  header {
+    background-color: $theme-10-accent;
+  }
+}
+
+@mixin theme-11 {
+  background-color: $theme-11-dark;
+  color: $theme-11-text;
+
+  header {
+    background-color: $theme-11-accent;
+  }
+}
+
+@mixin theme-12 {
+  background-color: $theme-12-dark;
+  color: $theme-12-text;
+
+  header {
+    background-color: $theme-12-accent;
+  }
+}
+
 .theme-1 {
   @include theme-1;
 }
@@ -141,6 +216,26 @@ $main-padding: 0 5%;
 
 .theme-7 {
   @include theme-7;
+}
+
+.theme-8 {
+  @include theme-8;
+}
+
+.theme-9 {
+  @include theme-9;
+}
+
+.theme-10 {
+  @include theme-10;
+}
+
+.theme-11 {
+  @include theme-11;
+}
+
+.theme-12 {
+  @include theme-12;
 }
 
 /* Resets */
@@ -236,7 +331,26 @@ header {
       background: linear-gradient(to top right, $theme-7-dark 50%, $theme-7-accent 50%);
     }
 
-    // Optional: Add some hover effects
+    &.theme-8 {
+      background: linear-gradient(to top right, $theme-8-dark 50%, $theme-8-accent 50%);
+    }
+
+    &.theme-9 {
+      background: linear-gradient(to top right, $theme-9-dark 50%, $theme-9-accent 50%);
+    }
+
+    &.theme-10 {
+      background: linear-gradient(to top right, $theme-10-dark 50%, $theme-10-accent 50%);
+    }
+
+    &.theme-11 {
+      background: linear-gradient(to top right, $theme-11-dark 50%, $theme-11-accent 50%);
+    }
+    
+    &.theme-12 {
+      background: linear-gradient(to top right, $theme-12-dark 50%, $theme-12-accent 50%);
+    }
+
     &:hover {
       opacity: 0.9; // Slightly dim on hover
     }

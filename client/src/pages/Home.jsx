@@ -40,6 +40,21 @@ function Home() {
                 <button className="theme-7" onClick={() => switchTheme('theme-7')}>
                     Theme 7
                 </button>
+                <button className="theme-8" onClick={() => switchTheme('theme-8')}>
+                    Theme 8
+                </button>
+                <button className="theme-9" onClick={() => switchTheme('theme-9')}>
+                    Theme 9
+                </button>
+                <button className="theme-10" onClick={() => switchTheme('theme-10')}>
+                    Theme 10
+                </button>
+                <button className="theme-11" onClick={() => switchTheme('theme-11')}>
+                    Theme 11
+                </button>
+                <button className="theme-12" onClick={() => switchTheme('theme-12')}>
+                    Theme 12
+                </button>
             </div>
         </section>
     );

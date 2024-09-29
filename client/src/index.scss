@@ -2,60 +2,184 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-/* VARIABLES */
-$theme-dark: #f1ece0;
-$theme-med: #d8cfb9;
-$theme-accent: #c9dddc;
-$theme-text: #000000;
+/* Default Theme */
+$theme-default-dark: #000000;
+$theme-default-med: #a3a3a3;
+$theme-default-accent: #ffffff;
+$theme-default-text: #000000;
+
+/* Theme 1 */
+$theme-1-dark: #ffffff;
+$theme-1-med: #d1c4de;
+$theme-1-accent: #ffd5c8;
+$theme-1-text: #6d4c41;
+
+/* Theme 2 */
+$theme-2-dark: #fffcf1;
+$theme-2-med: #0a9396;
+$theme-2-accent: #a6eeee;
+$theme-2-text: #000000;
+
+/* Theme 3 */
+$theme-3-dark: #d7dece;
+$theme-3-med: #C1CFA1;
+$theme-3-accent: #efdada;
+$theme-3-text: #171717;
+
+/* Theme 4 */
+$theme-4-dark: #FFEBD4;
+$theme-4-med: #F7B5CA;
+$theme-4-accent: #FFC6C6;
+$theme-4-text: #000000;
+
+/* Theme 5 */
+$theme-5-dark: #FAEED1;
+$theme-5-med: #BBAB8C;
+$theme-5-accent: #cfafa3;
+$theme-5-text: #333333;
+
+/* Theme 6 */
+$theme-6-dark: #fbfafa;
+$theme-6-med: #eaeaea;
+$theme-6-accent: #a1887f;
+$theme-6-text: #0d0d0d;
+
+/* Theme 7 */
+$theme-7-dark: #c6a29b;
+$theme-7-med: #a1887f;
+$theme-7-accent: #fffbfa;
+$theme-7-text: #010101;
+
 $main-padding: 0 5%;
 
-/* RESETS */
+@mixin theme-1 {
+  background-color: $theme-1-dark;
+  color: $theme-1-text;
+
+  header {
+    background-color: $theme-1-accent;
+  }
+}
+
+@mixin theme-2 {
+  background-color: $theme-2-dark;
+  color: $theme-2-text;
+
+  header {
+    background-color: $theme-2-accent;
+  }
+}
+
+@mixin theme-3 {
+  background-color: $theme-3-dark;
+  color: $theme-3-text;
+
+  header {
+    background-color: $theme-3-accent;
+  }
+}
+
+@mixin theme-4 {
+  background-color: $theme-4-dark;
+  color: $theme-4-text;
+
+  header {
+    background-color: $theme-4-accent;
+  }
+}
+
+@mixin theme-5 {
+  background-color: $theme-5-dark;
+  color: $theme-5-text;
+
+  header {
+    background-color: $theme-5-accent;
+  }
+}
+
+@mixin theme-6 {
+  background-color: $theme-6-dark;
+  color: $theme-6-text;
+
+  header {
+    background-color: $theme-6-accent;
+  }
+}
+
+@mixin theme-7 {
+  background-color: $theme-7-dark;
+  color: $theme-7-text;
+
+  header {
+    background-color: $theme-7-accent;
+  }
+}
+
+.theme-1 {
+  @include theme-1;
+}
+
+.theme-2 {
+  @include theme-2;
+}
+
+.theme-3 {
+  @include theme-3;
+}
+
+.theme-4 {
+  @include theme-4;
+}
+
+.theme-5 {
+  @include theme-5;
+}
+
+.theme-6 {
+  @include theme-6;
+}
+
+.theme-7 {
+  @include theme-7;
+}
+
+/* Resets */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    line-height: 1.4;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.4;
+  font-family: sans-serif;
 }
 
 html,
 body,
 #root {
-    min-height: 100%;
-    height: 100%;
-    color: $theme-text;
+  min-height: 100%;
+  height: 100%;
 }
 
-/* GLOBAL CLASSES */
 #root {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 body {
-    height: fit-content;
-    background-color: $theme-dark;
-    overflow-x: hidden;
+  height: fit-content;
+  overflow-x: hidden;
 }
 
 a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
+  text-decoration: none;
+  color: inherit;
 }
 
-.main-padding {
-    padding: $main-padding;
-}
-
-/* CUSTOM CLASSES */
 header {
-  background-color: $theme-accent;
-
   nav {
     :not(:last-child) {
       margin-right: 16px;
@@ -63,6 +187,58 @@ header {
 
     .active {
       text-decoration: underline;
+    }
+  }
+}
+
+.theme-switcher {
+  button {
+    width: 100px; // Adjust the width as needed
+    height: 50px; // Adjust the height as needed
+    border: 2px solid black; // Black border
+    border-radius: 10px; // Adjust for rounded corners
+    color: rgb(0, 0, 0); // Text color
+    cursor: pointer;
+    position: relative; // Required for pseudo-elements
+
+    // Add white text outline effect
+    text-shadow: 
+      -1px -1px 0 #ffffff,  
+      1px -1px 0 #ffffff,
+      -1px 1px 0 #ffffff,
+      1px 1px 0 #ffffff;
+
+    &.theme-1 {
+      background: linear-gradient(to top right, $theme-1-dark 50%, $theme-1-accent 50%);
+    }
+
+    &.theme-2 {
+      background: linear-gradient(to top right, $theme-2-dark 50%, $theme-2-accent 50%);
+    }
+
+    &.theme-3 {
+      background: linear-gradient(to top right, $theme-3-dark 50%, $theme-3-accent 50%);
+    }
+
+    &.theme-4 {
+      background: linear-gradient(to top right, $theme-4-dark 50%, $theme-4-accent 50%);
+    }
+
+    &.theme-5 {
+      background: linear-gradient(to top right, $theme-5-dark 50%, $theme-5-accent 50%);
+    }
+
+    &.theme-6 {
+      background: linear-gradient(to top right, $theme-6-dark 50%, $theme-6-accent 50%);
+    }
+
+    &.theme-7 {
+      background: linear-gradient(to top right, $theme-7-dark 50%, $theme-7-accent 50%);
+    }
+
+    // Optional: Add some hover effects
+    &:hover {
+      opacity: 0.9; // Slightly dim on hover
     }
   }
 }

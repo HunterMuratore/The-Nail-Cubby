@@ -1,7 +1,7 @@
 function About() {
     return (
         <section id="about" className="about text-center main-padding my-32">
-            <article className="2xl:text-2xl xl:text-xl lg:text-xl md:text-lg sm:text-md mt-20">
+            <article className="2xl:text-2xl xl:text-xl lg:text-xl md:text-lg sm:text-md mt-20 px-5">
                 <h1 className="text-4xl font-bold mt-10 mb-5">About Me</h1>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem magni maiores quod consequuntur architecto provident eaque. Labore nobis quae blanditiis quod iure nesciunt sunt voluptatibus praesentium ullam? Fugiat, nisi molestias!
                 Debitis, sunt hic pariatur voluptate qui reiciendis non in maiores veritatis id natus quisquam modi ipsa iure laborum. Eos, itaque. Quod quidem voluptatum aspernatur optio ducimus facere fuga praesentium voluptatibus!

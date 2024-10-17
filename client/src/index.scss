@@ -3,53 +3,73 @@
 @import "tailwindcss/utilities";
 
 /* VARIABLES */
-$theme-dark: #f1ece0;
-$theme-med: #d8cfb9;
-$theme-accent: #c9dddc;
-$theme-text: #000000;
+$theme-light: #ffffff;
+$theme-dark: #dddddd;
+$theme-alt: #dfe6e9; 
+$theme-med: #ca9484;
+$theme-accent: #fccec0;
+$theme-text: #6d4c41;
 $main-padding: 0 5%;
 
 /* RESETS */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    line-height: 1.4;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.4;
+  font-family: sans-serif;
 }
 
 html,
 body,
 #root {
-    min-height: 100%;
-    height: 100%;
-    color: $theme-text;
+  min-height: 100%;
+  height: 100%;
+  color: $theme-text;
 }
 
 /* GLOBAL CLASSES */
 #root {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 body {
-    height: fit-content;
-    background-color: $theme-dark;
-    overflow-x: hidden;
+  height: fit-content;
+  background-color: $theme-light;
+  overflow-x: hidden;
 }
 
 a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
+  text-decoration: none;
+  color: rgb(0, 0, 0);
 }
 
 .main-padding {
-    padding: $main-padding;
+  padding: $main-padding;
+}
+
+.my-btn,
+.my-btn:active,
+.my-btn:focus,
+.my-btn.focus {
+  background-color: darken($theme-accent, 3%) !important;
+  transition: background-color 0.2s ease-in-out;
+  border: none;
+  border-radius: 6px;
+  padding: 18px 28px;
+  color: darken($theme-text, 15%);
+
+  &:hover,
+  &.open {
+    background-color: $theme-accent !important;
+    color: darken($theme-text, 10%);
+  }
 }
 
 /* CUSTOM CLASSES */
@@ -60,9 +80,36 @@ header {
     :not(:last-child) {
       margin-right: 16px;
     }
+  }
+}
 
-    .active {
-      text-decoration: underline;
+#home {
+  background: linear-gradient(to top, $theme-dark, $theme-light 25%);
+
+  h1, h2 {
+    color: $theme-light;
+  }
+}
+
+#about {
+  background: linear-gradient(to top, $theme-light, $theme-dark 25%);
+}
+
+#services {
+  background: linear-gradient(to top, $theme-dark, $theme-light 25%);
+}
+
+#reviews {
+  background: linear-gradient(to top, $theme-light, $theme-dark 25%);
+}
+
+#contact {
+  .social-link {
+    transition: color 0.2s ease-in-out;
+    color: lighten($theme-text, 10%);
+
+    &:hover {
+      color: $theme-med;
     }
   }
 }

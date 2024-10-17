@@ -1,19 +1,34 @@
+import sorya_headshot from '../assets/images/hand_3.jpg'
+
 function About() {
     return (
-        <section id="about" className="about text-center main-padding my-32">
-            <article className="2xl:text-2xl xl:text-xl lg:text-xl md:text-lg sm:text-md mt-20">
-                <h1 className="text-4xl font-bold mt-10 mb-5">About Me</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem magni maiores quod consequuntur architecto provident eaque. Labore nobis quae blanditiis quod iure nesciunt sunt voluptatibus praesentium ullam? Fugiat, nisi molestias!
-                Debitis, sunt hic pariatur voluptate qui reiciendis non in maiores veritatis id natus quisquam modi ipsa iure laborum. Eos, itaque. Quod quidem voluptatum aspernatur optio ducimus facere fuga praesentium voluptatibus!
-                Porro quasi consequuntur doloribus, quo totam qui dignissimos alias commodi ipsam veniam veritatis consectetur illum amet adipisci nihil cupiditate ut exercitationem. Voluptatem excepturi pariatur, numquam dolor libero ducimus laborum suscipit?
-                Ex illum quis beatae maiores, quibusdam libero magnam, corporis cupiditate repudiandae sint reiciendis expedita? Nemo, hic aspernatur similique quis eveniet perspiciatis totam voluptatum necessitatibus autem fugit sint aut accusamus ducimus.
-                Quas rem a reiciendis beatae debitis nesciunt ducimus, magni eveniet recusandae maiores molestias tempore dignissimos. Aut quo nihil voluptatem cumque magnam quam in rem, officia aspernatur error eveniet voluptate quidem.</p>
+        <section id="about" className="py-20 bg-gray-100">
+            <div className="container mx-auto px-4">
+                {/* About Us Section */}
+                <div className="text-center">
+                    <h2 className="text-4xl font-bold mb-8">About Us</h2>
+                    <p className="lg:text-2xl md:text-xl text-lg max-w-2xl mx-auto">At The Nail Cubby, we believe in delivering a luxurious experience that makes every customer feel special. This is a placeholder, add a more detailed description of your shop and what a customer can expect when they come in for a service.</p>
+                </div>
 
-                <p className="mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tempore nam dolore, voluptates molestiae quae voluptatum reiciendis fuga quia eos eligendi veniam corrupti accusantium aut obcaecati! Earum, eos ratione? Praesentium.
-                Ut cum suscipit aut magnam neque perspiciatis dolor dicta dignissimos inventore incidunt? Non at aliquam velit, molestiae dolor sapiente blanditiis sint aspernatur, fugiat deleniti consectetur quaerat aut nam distinctio laborum.</p>
-            </article>
+                {/* Meet Sorya Section */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-14">
+                    <div className="text-start">
+                        <h2 className="text-4xl font-bold mb-4">Meet Sorya</h2>
+                        <p className="lg:text-2xl md:text-xl text-lg max-w-2xl">Add short biography here. Include why you're passionate about The Nail Cubby and maybe a history of your professional career as well as hobbies so people can learn a little about you. -- Add your headshot here --</p>
+                    </div>
+
+                    {/* Image of Sorya */}
+                    <div className="flex justify-center">
+                        <img
+                            src={sorya_headshot} 
+                            alt="Sorya"
+                            className="w-64 h-64 object-cover rounded-full border-4 border-gray-300 shadow-lg"
+                        />
+                    </div>
+                </div>
+            </div>
         </section>
-    )
+    );
 }
 
-export default About
+export default About;
